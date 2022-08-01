@@ -1,3 +1,10 @@
-# Write your solution here
 x = 27
 y = 15
+sum = x + y
+difference = x - y
+multiply = x * y
+division = x / y
+print (f"{x} + {y} = {sum}")
+print (f"{x} - {y} = {difference}")
+print (f"{x} * {y} = {multiply}")
+print (f"{x} / {y} = {division}")

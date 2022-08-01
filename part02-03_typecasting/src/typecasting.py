@@ -1,6 +1,8 @@
 # Write your solution here
-number = float(input("Please type in a number: "))
-i, dec = divmod(number, 1)
-print("Integer part: ", int(number))
+number = float (input("Please type in a number: "))
 
-print("Decimal part: ", dec)
+integer = int(number)
+decimal = number - integer
+
+print (f"Integer part: {integer}")
+print (f"Decimal parti: {decimal}")
