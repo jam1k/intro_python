@@ -10,8 +10,7 @@ def triangle(size, char):
     i = 1
     while (i <= size):
         line(i, char)
-        i+=1
-
+        i += 1
 
 def shape(size: int, char: str, height: int, char_rect: str):
     triangle(size, char)

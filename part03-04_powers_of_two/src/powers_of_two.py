@@ -1,7 +1,7 @@
 # Write your solution here
 
-um = int(input("Upper limit: "))
+num = int(input("Upper limit: "))
 i = 1
 while(i <= num):
     print (i)
-    i = 2*i
+    i = 2 * i

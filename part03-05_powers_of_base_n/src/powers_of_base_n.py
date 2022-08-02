@@ -6,4 +6,4 @@ base = int(input("Base: "))
 i = 1
 while(i <= num):
     print(i)
-    i = base*i
+    i = base * i

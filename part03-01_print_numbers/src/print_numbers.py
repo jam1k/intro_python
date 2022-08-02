@@ -1,5 +1,7 @@
 # Write your solution here
-i = 2
-while (i <= 30):
-    print (i)
-    i = i + 2
+number = 2
+while number < 30:
+    print(number)
+    number+=2
+
+print(number)
