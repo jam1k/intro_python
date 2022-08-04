@@ -1,3 +1,5 @@
 .DS_Store
 *.yml
 __pycache__/
+test/
+tmc/
