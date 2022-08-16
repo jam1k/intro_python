@@ -1,5 +1,4 @@
-# wwite your solution here
-# write your solution here
+# Write your solution here
 def final_score(name, exam_points, exercise_points):
     total_points = exam_points + exercise_points
     if total_points < 15:
@@ -16,15 +15,15 @@ def final_score(name, exam_points, exercise_points):
         return 5
 
 if True:
-    # this is never executed
+    # user input
     student_info = input("Student information: ")
     exercise_data = input("Exercises completed: ")
     exam_data = input("Exam points: ")
 else:
     # hard-coded input
-    student_info = "/Users/jamilya/Library/Application Support/tmc/vscode/mooc-programming-22/part06-04_course_grading_part_1/src/students1.csv"
-    exercise_data = "/Users/jamilya/Library/Application Support/tmc/vscode/mooc-programming-22/part06-04_course_grading_part_1/src/exercises1.csv"
-    exam_data = "/Users/jamilya/Library/Application Support/tmc/vscode/mooc-programming-22/part06-05_course_grading_part_2/src/exam_points1.csv"
+    student_info = "students1.csv"
+    exercise_data = "exercises1.csv"
+    exam_data = "exam_points1.csv"
     
 with open(student_info) as student_file:
     students = {}
@@ -37,7 +36,6 @@ with open(student_info) as student_file:
 with open (exercise_data) as exercise_file:
     exer = {}
     for line in exercise_file:
-        parts = line.replace("\n", "")
         parts = line.split(';')
         if parts[0] == "id":
             continue
@@ -52,15 +50,11 @@ with open(exam_data) as exam_file:
             continue
         exams[parts[0]] = int(parts[1]) + int(parts[2]) + int(parts[3])
 
-
 for id, name in students.items():
     if id in exer:
         grade_exer = int(exer[id]*10/40)
-        #print(f"exerxises {grade_exer}")
     if id in exams:
         grade_exam = exams[id]
-        #print(f"exam grade {grade_exam}")
     
-
     total = final_score(name, grade_exam, grade_exer)
     print(f"{name} {total}")

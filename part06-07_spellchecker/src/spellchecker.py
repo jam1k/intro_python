@@ -4,20 +4,12 @@ def reading_file(filename):
         return [x.strip() for x in f]
 
 text = input("Write text: ")
-words = reading_file("wordlist.txt")
-#print(words[0:10])
 text = text.split(" ")
+words = reading_file("wordlist.txt")
+
 for word in text:
-    if word == text[-1]:
-        if word.lower() in words:
-            print(f"{word}", end = "")
-        else:
-            print(f"*{word}*", end = "")
+    if word.lower() in words:
+        print(f"{word} ", end = "")
     else:
-        if word.lower() in words:
-            print(f"{word}", end = " ")
-            
-        else:
-            print(f"*{word}*", end = " ")
-print("\n")
-    
+        print(f"*{word}* ", end = "")
+print()
